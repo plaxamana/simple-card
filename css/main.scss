@@ -1,0 +1,52 @@
+$bgColor-body: #2D2E36;
+$bgColor-card: #383A45;
+$textColor-card: #8D91A6;
+$headingColor-card: #FFF;
+$font: 'Poppins'; 
+$br-radius: 8px;
+
+body {
+  background: $bgColor-body;
+  font-family: $font;
+  display: flex;
+  min-height: calc(100vh - 2em);
+  align-items: center;
+  justify-content: center;
+  padding: 0 1em;
+}
+
+img {
+  width: 100%;
+  border-radius: $br-radius;
+}
+
+h1 {
+  color: $headingColor-card;
+  font-size: 1.875em;
+}
+
+.card {
+  color: $textColor-card;
+  background: $bgColor-card;
+  padding: 2em;
+  border-radius: $br-radius;
+  max-width: 730px;
+  margin: 0 auto;
+}
+
+@media(min-width: 600px) {
+  .card {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  img {
+    width: 40%;
+    object-fit: cover;
+  }
+
+  .content {
+    flex: 1;
+    margin-left: 2em;
+  }
+}
